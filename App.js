@@ -29,7 +29,11 @@ export default function App() {
           data={courseGoals}
           renderItem={(itemData) => {
             return (
-              <GoalItem text={itemData.item.text} onDeleteItem={deleteGoalHandler} />
+              <GoalItem
+                text={itemData.item.text}
+                onDeleteItem={deleteGoalHandler}
+                id={itemData.item.id}
+              />
             );
           }}
           keyExtractor={(item, index) => {
